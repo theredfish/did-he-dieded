@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 9358f51f25498aa4eb4f34cd15675446
+timeCreated: 1515426427
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Arm_IK.L
+    100002: Arm_IK.L_end
+    100004: Arm_IK.R
+    100006: Arm_IK.R_end
+    100008: Armatut
+    100010: Chest
+    100012: Chibi_Base
+    100014: //RootNode
+    100016: Elbow.L
+    100018: Elbow.L_end
+    100020: Elbow.R
+    100022: Elbow.R_end
+    100024: Foot.L
+    100026: Foot.L_end
+    100028: Foot.R
+    100030: Foot.R_end
+    100032: Head
+    100034: Head_end
+    100036: Knee.L
+    100038: Knee.L_end
+    100040: Knee.R
+    100042: Knee.R_end
+    100044: Leg_IK.L
+    100046: Leg_IK.R
+    100048: Lower_Arm.L
+    100050: Lower_Arm.R
+    100052: Lower_Fingers.L
+    100054: Lower_Fingers.L_end
+    100056: Lower_Fingers.R
+    100058: Lower_Fingers.R_end
+    100060: Lower_Leg.L
+    100062: Lower_Leg.L_end
+    100064: Lower_Leg.R
+    100066: Lower_Leg.R_end
+    100068: Lower_Thumb.L
+    100070: Lower_Thumb.L_end
+    100072: Lower_Thumb.R
+    100074: Lower_Thumb.R_end
+    100076: Main
+    100078: Palm.L
+    100080: Palm.R
+    100082: Stomach
+    100084: Upper _Arm.L
+    100086: Upper _Arm.R
+    100088: Upper_Fingers.L
+    100090: Upper_Fingers.R
+    100092: Upper_Leg.L
+    100094: Upper_Leg.R
+    100096: Upper_Thumb.L
+    100098: Upper_Thumb.R
+    400000: Arm_IK.L
+    400002: Arm_IK.L_end
+    400004: Arm_IK.R
+    400006: Arm_IK.R_end
+    400008: Armatut
+    400010: Chest
+    400012: Chibi_Base
+    400014: //RootNode
+    400016: Elbow.L
+    400018: Elbow.L_end
+    400020: Elbow.R
+    400022: Elbow.R_end
+    400024: Foot.L
+    400026: Foot.L_end
+    400028: Foot.R
+    400030: Foot.R_end
+    400032: Head
+    400034: Head_end
+    400036: Knee.L
+    400038: Knee.L_end
+    400040: Knee.R
+    400042: Knee.R_end
+    400044: Leg_IK.L
+    400046: Leg_IK.R
+    400048: Lower_Arm.L
+    400050: Lower_Arm.R
+    400052: Lower_Fingers.L
+    400054: Lower_Fingers.L_end
+    400056: Lower_Fingers.R
+    400058: Lower_Fingers.R_end
+    400060: Lower_Leg.L
+    400062: Lower_Leg.L_end
+    400064: Lower_Leg.R
+    400066: Lower_Leg.R_end
+    400068: Lower_Thumb.L
+    400070: Lower_Thumb.L_end
+    400072: Lower_Thumb.R
+    400074: Lower_Thumb.R_end
+    400076: Main
+    400078: Palm.L
+    400080: Palm.R
+    400082: Stomach
+    400084: Upper _Arm.L
+    400086: Upper _Arm.R
+    400088: Upper_Fingers.L
+    400090: Upper_Fingers.R
+    400092: Upper_Leg.L
+    400094: Upper_Leg.R
+    400096: Upper_Thumb.L
+    400098: Upper_Thumb.R
+    4300000: Chibi_Base
+    7400000: Armatut|ArmatutAction
+    7400002: Armatut|PoseLib
+    9500000: //RootNode
+    13700000: Chibi_Base
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armatut|ArmatutAction
+      takeName: Armatut|ArmatutAction
+      firstFrame: 0
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armatut|PoseLib
+      takeName: Armatut|PoseLib
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
