@@ -210,72 +210,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300018, guid: 8596d93ed39cb1b43aeeb68c4ab22c8b, type: 3}
---- !u!1001 &317815921
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.414
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8b5ee441f5e12e54db13370fa6fffac3, type: 2}
-    - target: {fileID: 9500000, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9358f51f25498aa4eb4f34cd15675446, type: 3}
-  m_IsPrefabParent: 0
 --- !u!1 &475088823 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100020, guid: 8596d93ed39cb1b43aeeb68c4ab22c8b, type: 3}
@@ -629,8 +563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb92111164d9394cbd305979508c3bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  stateName: 
+  animator: {fileID: 1812599854}
+  stateName: Pikes out
 --- !u!23 &1135231432
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1218,6 +1152,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tpAmmoText: {fileID: 585948729}
   player: {fileID: 2063165090}
+--- !u!95 &1812599854 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9500000, guid: 8596d93ed39cb1b43aeeb68c4ab22c8b,
+    type: 3}
+  m_PrefabInternal: {fileID: 1331388196}
 --- !u!4 &1812599855 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 8596d93ed39cb1b43aeeb68c4ab22c8b, type: 3}
