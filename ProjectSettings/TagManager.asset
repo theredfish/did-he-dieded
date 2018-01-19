@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - BackgroundPlane
+  - shield
+  - explosion
+  - StartAttack
   layers:
   - Default
   - TransparentFX
