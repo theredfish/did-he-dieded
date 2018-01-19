@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: 347d161b0d6b2a84f90b7ef979fe3a8c
+timeCreated: 1516365939
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Arm_IK.L
+    100002: Arm_IK.L_end
+    100004: Arm_IK.R
+    100006: Arm_IK.R_end
+    100008: Armatut
+    100010: Camera
+    100012: Chest
+    100014: //RootNode
+    100016: Chibi_Base
+    100018: Elbow.L
+    100020: Elbow.L_end
+    100022: Elbow.R
+    100024: Elbow.R_end
+    100026: Foot.L
+    100028: Foot.L_end
+    100030: Foot.R
+    100032: Foot.R_end
+    100034: Head
+    100036: Head_end
+    100038: Knee.L
+    100040: Knee.L_end
+    100042: Knee.R
+    100044: Knee.R_end
+    100046: Lamp
+    100048: Lamp.002
+    100050: Leg_IK.L
+    100052: Leg_IK.R
+    100054: Lower_Arm.L
+    100056: Lower_Arm.R
+    100058: Lower_Fingers.L
+    100060: Lower_Fingers.L_end
+    100062: Lower_Fingers.R
+    100064: Lower_Fingers.R_end
+    100066: Lower_Leg.L
+    100068: Lower_Leg.L_end
+    100070: Lower_Leg.R
+    100072: Lower_Leg.R_end
+    100074: Lower_Thumb.L
+    100076: Lower_Thumb.L_end
+    100078: Lower_Thumb.R
+    100080: Lower_Thumb.R_end
+    100082: Main
+    100084: Palm.L
+    100086: Palm.R
+    100088: Stomach
+    100090: Upper _Arm.L
+    100092: Upper _Arm.R
+    100094: Upper_Fingers.L
+    100096: Upper_Fingers.R
+    100098: Upper_Leg.L
+    100100: Upper_Leg.R
+    100102: Upper_Thumb.L
+    100104: Upper_Thumb.R
+    400000: Arm_IK.L
+    400002: Arm_IK.L_end
+    400004: Arm_IK.R
+    400006: Arm_IK.R_end
+    400008: Armatut
+    400010: Camera
+    400012: Chest
+    400014: //RootNode
+    400016: Chibi_Base
+    400018: Elbow.L
+    400020: Elbow.L_end
+    400022: Elbow.R
+    400024: Elbow.R_end
+    400026: Foot.L
+    400028: Foot.L_end
+    400030: Foot.R
+    400032: Foot.R_end
+    400034: Head
+    400036: Head_end
+    400038: Knee.L
+    400040: Knee.L_end
+    400042: Knee.R
+    400044: Knee.R_end
+    400046: Lamp
+    400048: Lamp.002
+    400050: Leg_IK.L
+    400052: Leg_IK.R
+    400054: Lower_Arm.L
+    400056: Lower_Arm.R
+    400058: Lower_Fingers.L
+    400060: Lower_Fingers.L_end
+    400062: Lower_Fingers.R
+    400064: Lower_Fingers.R_end
+    400066: Lower_Leg.L
+    400068: Lower_Leg.L_end
+    400070: Lower_Leg.R
+    400072: Lower_Leg.R_end
+    400074: Lower_Thumb.L
+    400076: Lower_Thumb.L_end
+    400078: Lower_Thumb.R
+    400080: Lower_Thumb.R_end
+    400082: Main
+    400084: Palm.L
+    400086: Palm.R
+    400088: Stomach
+    400090: Upper _Arm.L
+    400092: Upper _Arm.R
+    400094: Upper_Fingers.L
+    400096: Upper_Fingers.R
+    400098: Upper_Leg.L
+    400100: Upper_Leg.R
+    400102: Upper_Thumb.L
+    400104: Upper_Thumb.R
+    2000000: Camera
+    4300000: Chibi_Base
+    7400000: Armatut|attack
+    7400002: Armatut|idle
+    7400004: Armatut|PoseLib
+    7400006: Armatut|walk
+    7400008: Armatut|walk.001
+    9500000: //RootNode
+    10800000: Lamp
+    10800002: Lamp.002
+    13700000: Chibi_Base
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armatut|attack
+      takeName: Armatut|attack
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armatut|idle
+      takeName: Armatut|idle
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armatut|walk
+      takeName: Armatut|walk
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
