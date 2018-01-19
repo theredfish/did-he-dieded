@@ -51,7 +51,7 @@ public class Player : MonoBehaviour {
 		}
 
 		// We check any attack
-		if (Input.GetButtonDown("Fire1")) {
+		if (Input.GetButtonDown("Fire2")) {
 			this.Shoot();
 		}
 
