@@ -10,6 +10,8 @@ public class Player : MonoBehaviour {
 	private bool isForward = true;
 	private bool isBackward = false;
 
+	private bool teleportRunning = false;
+
 	[Header("La puissance du saut")]
 	public float jumpForce = 5f;
 
@@ -27,6 +29,14 @@ public class Player : MonoBehaviour {
 	private CharacterController controller;
 
 	public bool hasGravity = true;
+
+
+	[Header("Le prefab de l'effet de tp - start")]
+	public GameObject tpStartParticles;
+
+
+	[Header("Le prefab de l'effet de tp - end")]
+	public GameObject tpEndParticles;
 
 	// The current movement vector
 	private Vector3 movement = Vector3.zero;
@@ -97,11 +107,30 @@ public class Player : MonoBehaviour {
 	}
 
 	void Teleport() {
+		if (!teleportRunning) {
+			StartCoroutine ("TeleportCoroutine");
+		}
+	}
+
+	IEnumerator TeleportCoroutine(){
+		this.teleportRunning = true;
+		this.hasGravity = false;
 		Vector3 direction = new Vector3 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
 		Vector3 tpVector = direction.normalized * teleportRange;
 
+		this.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+
+		Instantiate (tpStartParticles, transform.position, Quaternion.identity);
+
+		yield return new WaitForSeconds (.2f);
+
 		transform.position += tpVector;
+
+		Instantiate (tpEndParticles, transform.position, Quaternion.identity);
+		this.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
 		this.tpAmmo--;
+		this.teleportRunning = false;	
+		this.hasGravity = true;	
 	}
 
 	void Shoot() {

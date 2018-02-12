@@ -1522,11 +1522,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 15
-  moveSpeed: 13
-  teleportRange: 4
+  moveSpeed: 8
+  teleportRange: 5
   tpAmmo: Infinity
   roseFireBall: {fileID: 400000, guid: 1502d27b5b1167e4c8b8c85d7546b34f, type: 2}
   hasGravity: 1
+  tpStartParticles: {fileID: 1000012906409722, guid: 8887970892f60ae469bbd550b0a91a04,
+    type: 2}
+  tpEndParticles: {fileID: 1000012906409722, guid: 8887970892f60ae469bbd550b0a91a04,
+    type: 2}
 --- !u!137 &137924149720076712
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
