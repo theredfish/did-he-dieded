@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/WelcomeScreen.unity
+    guid: de3f529934996b649a120b187399bd9c
+  - enabled: 1
+    path: Assets/Scenes/TutorialMap.unity
+    guid: 4e750bdf8ba2aa44680d661310a4544a
+  - enabled: 0
+    path: Assets/Scenes/MonsterPatrol.unity
+    guid: 2c9cc9ed251f181429818e8d7ec040de
