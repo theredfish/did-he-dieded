@@ -3,35 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireBallController : MonoBehaviour {
-	private CharacterController player;
-	private float speed = 1.3f;
-	private bool toRight;
+	private GameObject player;
+	private GameObject startPosition;
+	private float speed = 8f;
+	private bool isForward = true;
 
 	void Awake() {
-		this.player = gameObject.GetComponentInParent<CharacterController> ();
-		Vector3 offset = new Vector3 (0, 1, 0);
-		transform.position = player.gameObject.transform.position + offset;
-	}
-
-	void Start() {
+		this.player = GameObject.FindGameObjectWithTag ("Player");
+		this.startPosition = GameObject.FindGameObjectWithTag ("StartAttackPosition");
 	}
 
 	// Update is called once per frame
-	void Update () {
-		Vector3 velocity;
-
-		if (player.gameObject.GetComponent<Player> ().GetIsForward ()) {
-			velocity = new Vector3(0,0,1) * speed;
-		} else {
-			velocity = new Vector3(0,0,-1) * speed;
-		}
-
-		GetComponent<Rigidbody> ().velocity = velocity;
+	void Start () {
+		transform.position = this.startPosition.transform.position;
+		isForward = player.gameObject.GetComponent<Player> ().GetIsForward ();
 	}
 
-	void OnCollisionEnter(Collision collision) {
-		if (collision.collider.tag != "Player") {
+	void Update() {
+		if (isForward) {
+			transform.Translate (-Vector3.forward * speed * Time.deltaTime);
+		} else {
+			transform.Translate (Vector3.forward * speed * Time.deltaTime);
+		}
+	}
+		
+	void OnTriggerEnter(Collider other) {
+		if (other.tag != "Player") {
 			Destroy (gameObject);
 		}
 	}
-}
+}	
