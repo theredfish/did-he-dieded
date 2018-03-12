@@ -11,7 +11,9 @@ public class Monster_behaviour : MonoBehaviour
     public float speed = 6.0F;
     private bool goRight = true;
     private bool doPatrolCoroutine = true;
-    private bool isDead = false;
+    public bool isDead = false;
+
+    public int nbAnimDeath = 0;
 
     Animation anim;
     public const string IDLE = "Anim_Idle";
@@ -19,11 +21,13 @@ public class Monster_behaviour : MonoBehaviour
     public const string ATTACK = "Anim_Attack";
     public const string DEATH = "Anim_Death";
 
-    private void Start()
+    public void Start()
     {
         moveDirection = transform.position;
         endDirection = new Vector3(moveDirection.x + 10, moveDirection.y, moveDirection.z);
         anim = GetComponent<Animation>();
+        isDead = false;
+        nbAnimDeath = 0;
     }
 
     void Update()
@@ -41,6 +45,9 @@ public class Monster_behaviour : MonoBehaviour
                 StopCoroutine("MonsterPatrol");
                 anim.CrossFade(ATTACK);
             }
+        } else
+        {
+            StartCoroutine("MonsterDeath");
         }
 
     }
@@ -88,13 +95,28 @@ public class Monster_behaviour : MonoBehaviour
         {
             StopAllCoroutines();
             isDead = true;
-            anim.CrossFade(DEATH);
         }
     }
 
     void OnTriggerExit(Collider collider)
     {
         doPatrolCoroutine = true;
+    }
+
+    IEnumerator MonsterDeath()
+    {
+
+        if (nbAnimDeath == 0)
+        {
+            anim.CrossFade(DEATH);
+            nbAnimDeath++;
+        }
+        
+        yield return new WaitForSeconds(1);
+
+        //DestroyObject(gameObject);
+
+        StopAllCoroutines();
     }
 
 }

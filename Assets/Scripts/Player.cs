@@ -107,7 +107,7 @@ public class Player : MonoBehaviour {
 	public void Fall() {
 		transform.position = Vector3.zero;
 		this.tpAmmo = maxTpAmmo;
-	}
+    }
 
 	public bool GetIsForward() {
 		return isForward;

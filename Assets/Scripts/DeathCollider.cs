@@ -7,7 +7,10 @@ public class DeathCollider : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (other.CompareTag ("Player")) {
-			other.gameObject.GetComponent<Player> ().Fall ();
+            if (!(this.CompareTag("Monster") && this.GetComponent<Monster_behaviour>().isDead))
+            {
+                GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().RespawnPlayer();
+            }
 		}
 	}
 }
