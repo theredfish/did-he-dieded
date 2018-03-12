@@ -10,7 +10,7 @@ public class Monster_behaviour : MonoBehaviour
     private Vector3 endDirection;
     public float speed = 6.0F;
     private bool goRight = true;
-    private bool doCoroutine = true;
+    private bool doPatrolCoroutine = true;
     private bool isDead = false;
 
     Animation anim;
@@ -18,8 +18,6 @@ public class Monster_behaviour : MonoBehaviour
     public const string RUN = "Anim_Run";
     public const string ATTACK = "Anim_Attack";
     public const string DEATH = "Anim_Death";
-
-    // machine à états --> enum sur les états
 
     private void Start()
     {
@@ -34,7 +32,7 @@ public class Monster_behaviour : MonoBehaviour
         {
             anim.CrossFade(RUN);
 
-            if (doCoroutine)
+            if (doPatrolCoroutine)
             {
                 StartCoroutine("MonsterPatrol");
             }
@@ -83,7 +81,7 @@ public class Monster_behaviour : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            doCoroutine = false;
+            doPatrolCoroutine = false;
         }
 
         if (collider.gameObject.tag == "Fireball")
@@ -96,7 +94,7 @@ public class Monster_behaviour : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        doCoroutine = true;
+        doPatrolCoroutine = true;
     }
 
 }

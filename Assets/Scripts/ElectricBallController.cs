@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBallController : MonoBehaviour {
+public class ElectricBallController : MonoBehaviour {
 	private GameObject player;
 	private GameObject startPosition;
 	private float speed = 8f;
@@ -21,9 +21,9 @@ public class FireBallController : MonoBehaviour {
 
 	void Update() {
 		if (isForward) {
-			transform.Translate (-Vector3.forward * speed * Time.deltaTime);
+			transform.Translate (Vector3.right * speed * Time.deltaTime);
 		} else {
-			transform.Translate (Vector3.forward * speed * Time.deltaTime);
+			transform.Translate (Vector3.left * speed * Time.deltaTime);
 		}
 	}
 		
