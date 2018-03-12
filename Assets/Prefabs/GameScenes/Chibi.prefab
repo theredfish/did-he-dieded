@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 4175011517428336}
   m_Layer: 0
   m_Name: StartAttackPosition
-  m_TagString: Untagged
+  m_TagString: StartAttackPosition
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -938,7 +938,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1404078635805278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.01, z: 3.38}
+  m_LocalPosition: {x: -0, y: 3.74, z: 2.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4931616108736610}
@@ -1448,7 +1448,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381008336459174}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.04872, y: -0.376, z: 0.019868}
+  m_LocalPosition: {x: 0, y: -0.376, z: 0.019868}
   m_LocalScale: {x: 0.20797813, y: 0.20797811, z: 0.20797811}
   m_Children:
   - {fileID: 4689382237980992}
@@ -1525,7 +1525,8 @@ MonoBehaviour:
   moveSpeed: 8
   teleportRange: 5
   tpAmmo: Infinity
-  roseFireBall: {fileID: 400000, guid: 1502d27b5b1167e4c8b8c85d7546b34f, type: 2}
+  roseFireBall: {fileID: 4240302625424766, guid: ced33d1158ef10744bf6e8f312b9b230,
+    type: 2}
   hasGravity: 1
   tpStartParticles: {fileID: 1000012906409722, guid: 8887970892f60ae469bbd550b0a91a04,
     type: 2}

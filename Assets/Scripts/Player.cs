@@ -41,14 +41,11 @@ public class Player : MonoBehaviour {
 	// The current movement vector
 	private Vector3 movement = Vector3.zero;
 
-	private Transform StartAttackPosition;
-
 	// Use this for initialization
 	void Start () {
 		this.controller = GetComponent<CharacterController> ();
 		this.maxTpAmmo = this.tpAmmo;
 		this.anim = GetComponent<Animator>();
-		this.StartAttackPosition =  transform.Find("StartAttackPosition").transform;
 	}
 
 	void Update () {
@@ -85,14 +82,16 @@ public class Player : MonoBehaviour {
 		this.controller.Move(movement * Time.deltaTime);
 		float axis = Input.GetAxisRaw("Horizontal");
 
-		if (axis < 0) {
+		if (movement.y > 0) {
+			anim.Play ("Jump");
+		} else if (axis < 0) {
 			if (isForward) {
-				transform.Rotate(new Vector3(0, -180, 0));
+				transform.Rotate (new Vector3 (0, -180, 0));
 				isForward = false;
 				isBackward = true;
 			}
 
-			anim.SetTrigger("isWalking");
+			anim.Play ("Run 1");
 		} else if (axis > 0) {
 			if (isBackward) {
 				transform.Rotate (new Vector3 (0, 180, 0));
@@ -100,9 +99,9 @@ public class Player : MonoBehaviour {
 				isBackward = false;
 			}
 
-			anim.SetTrigger("isWalking");
+			anim.Play ("Run 2");
 		} else {
-			anim.SetTrigger("isIdle");
+			anim.Play ("Idle 1");
 		}
 	}
 
@@ -135,7 +134,7 @@ public class Player : MonoBehaviour {
 
 	void Shoot() {
 		anim.SetTrigger("isAttacking");
-		Instantiate (roseFireBall, StartAttackPosition);
+		Transform projectile = Instantiate (roseFireBall);
 	}
 
 	public void Fall() {

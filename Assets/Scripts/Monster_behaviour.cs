@@ -86,7 +86,7 @@ public class Monster_behaviour : MonoBehaviour
             doCoroutine = false;
         }
 
-        if (collider.gameObject.tag == "RoseFireBall")
+        if (collider.gameObject.tag == "Fireball")
         {
             StopAllCoroutines();
             isDead = true;

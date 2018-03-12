@@ -7,7 +7,9 @@ TagManager:
   - BackgroundPlane
   - shield
   - explosion
-  - StartAttack
+  - Monster
+  - StartAttackPosition
+  - Fireball
   layers:
   - Default
   - TransparentFX
