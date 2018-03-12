@@ -22,11 +22,9 @@ public class Player : MonoBehaviour {
 	public float tpAmmo = 2f;
 
 	[Header("Le prefab de l'attaque")]
-	public Transform roseFireBall;
+	public Transform electricFireBall;
 
 	private CharacterController controller;
-
-	public bool hasGravity = true;
 
 	// The current movement vector
 	private Vector3 movement = Vector3.zero;
@@ -103,7 +101,7 @@ public class Player : MonoBehaviour {
 
 	void Shoot() {
 		anim.SetTrigger("isAttacking");
-		Transform projectile = Instantiate (roseFireBall);
+		Transform projectile = Instantiate (electricFireBall);
 	}
 
 	public void Fall() {

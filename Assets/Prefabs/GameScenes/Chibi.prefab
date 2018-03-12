@@ -386,7 +386,7 @@ GameObject:
   m_Layer: 0
   m_Name: StartAttackPosition
   m_TagString: StartAttackPosition
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 8220585740371884164, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -938,7 +938,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1404078635805278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 3.74, z: 2.17}
+  m_LocalPosition: {x: -0, y: 3.74, z: 4.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4931616108736610}
@@ -1525,9 +1525,8 @@ MonoBehaviour:
   moveSpeed: 13
   teleportRange: 4
   tpAmmo: Infinity
-  roseFireBall: {fileID: 4240302625424766, guid: ced33d1158ef10744bf6e8f312b9b230,
+  electricFireBall: {fileID: 4147101347385056, guid: 8574146800e80944080602a2128e5e02,
     type: 2}
-  hasGravity: 1
 --- !u!137 &137924149720076712
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
