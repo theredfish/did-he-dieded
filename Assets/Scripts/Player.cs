@@ -31,14 +31,11 @@ public class Player : MonoBehaviour {
 	// The current movement vector
 	private Vector3 movement = Vector3.zero;
 
-	private Transform StartAttackPosition;
-
 	// Use this for initialization
 	void Start () {
 		this.controller = GetComponent<CharacterController> ();
 		this.maxTpAmmo = this.tpAmmo;
 		this.anim = GetComponent<Animator>();
-		this.StartAttackPosition =  transform.Find("StartAttackPosition").transform;
 	}
 
 	void Update () {
@@ -106,7 +103,7 @@ public class Player : MonoBehaviour {
 
 	void Shoot() {
 		anim.SetTrigger("isAttacking");
-		Instantiate (roseFireBall, StartAttackPosition);
+		Transform projectile = Instantiate (roseFireBall);
 	}
 
 	public void Fall() {
