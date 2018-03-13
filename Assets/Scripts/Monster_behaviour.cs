@@ -91,7 +91,7 @@ public class Monster_behaviour : MonoBehaviour
             doPatrolCoroutine = false;
         }
 
-        if (collider.gameObject.tag == "Fireball")
+        if (collider.gameObject.tag == "ElectricBall")
         {
             StopAllCoroutines();
             isDead = true;

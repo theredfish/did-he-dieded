@@ -9,8 +9,8 @@ TagManager:
   - explosion
   - Monster
   - StartAttackPosition
-  - Fireball
   - GameManager
+  - ElectricBall
   layers:
   - Default
   - TransparentFX
