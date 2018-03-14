@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour {
 	public Transform Player;
-	private Vector3 Offset = new Vector3(0, 6, -10f);
+	private Vector3 Offset = new Vector3(10f, 10f, -15.23f);
 
 	// Update is called once per frame
 	void LateUpdate () {
