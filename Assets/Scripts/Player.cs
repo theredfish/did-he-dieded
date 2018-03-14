@@ -9,7 +9,9 @@ public class Player : MonoBehaviour {
 	private bool isForward = true;
 	private bool isBackward = false;
     private int deaths = 0;
-
+    private float attackCooldown = 0.8f;
+    private float attackTimer = 0.8f;
+    private bool attacking = false;
 	private bool teleportRunning = false;
 
 	[Header("La puissance du saut")]
@@ -56,13 +58,25 @@ public class Player : MonoBehaviour {
 			this.Teleport ();
 		}
 
-		// We check any attack
-		if (Input.GetButtonDown("Fire2")) {
-			this.Shoot();
-		}
+		// We check any new attack
+		if (Input.GetButtonDown("Fire2") && !attacking) {
+            attacking = true;
+            attackTimer = attackCooldown;
+            Shoot();
+        }
 
-		// Then we get the vertical movement
-		if (controller.isGrounded) {
+        // Attack cooldown
+        if (attacking && attackTimer > 0)
+        {
+            attackTimer -= Time.deltaTime;
+        }
+        else
+        {
+            attacking = false;
+        }
+
+        // Then we get the vertical movement
+        if (controller.isGrounded) {
 			movement.y = 0;
 
 			// Jump
@@ -131,10 +145,12 @@ public class Player : MonoBehaviour {
 		this.hasGravity = true;	
 	}
 
-	void Shoot() {
-		anim.SetTrigger("isAttacking");
-		Transform projectile = Instantiate (electricFireBall);
-	}
+
+
+    public void Shoot() {
+        anim.SetTrigger("isAttacking");
+        Transform projectile = Instantiate(electricFireBall);
+    }
 
 	public void Kill() {
         tpAmmo = maxTpAmmo;
