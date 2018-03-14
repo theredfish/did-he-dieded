@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-    private int level = 3;                                 //Current level number, expressed in game as "Day 1".
+    public static GameManager instance = null;
+    private int level = 1;
 	private GameOverUI gameOverUI;
 
-	public Vector3 spawnLocation;							// Spawn location for player
+    private Player player;
+    private StoneMonster stoneMonster;
+    
+    private Vector3 playerSpawn;
+    private Vector3 stoneMonsterSpawn;
 
-    //Awake is always called before any Start functions
+
     void Awake()
     {
         //Check if instance already exists
@@ -28,19 +32,26 @@ public class GameManager : MonoBehaviour {
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
 
+        playerSpawn = transform.Find("PlayerSpawn").position;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player.transform.position = playerSpawn;
+
+        stoneMonsterSpawn = transform.Find("StoneMonsterSpawn").position;
+        stoneMonster = GameObject.FindGameObjectWithTag("Monster").GetComponent<StoneMonster>();
+        stoneMonster.transform.position = stoneMonsterSpawn;
+
         gameOverUI = FindObjectOfType(typeof(GameOverUI)) as GameOverUI;
     }
 
-    //Initializes the game for each level.
+    // Reset game objects
     public void GameOver()
     {
         gameOverUI.FadeInOut();
 
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        player.transform.position = spawnLocation;
-		player.Kill();
+        player.Kill();
+        player.transform.position = playerSpawn;
 
-        StoneMonster stoneMonster = GameObject.FindGameObjectWithTag("Monster").GetComponent<StoneMonster>();
         stoneMonster.Reset();
+        stoneMonster.transform.position = stoneMonsterSpawn;
     }
 }

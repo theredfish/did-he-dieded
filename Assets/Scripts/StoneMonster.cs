@@ -114,15 +114,12 @@ public class StoneMonster : MonoBehaviour
         
         yield return new WaitForSeconds(1);
 
-        //DestroyObject(gameObject);
-
         StopAllCoroutines();
     }
 
     public void Reset()
     {
-        transform.position = new Vector3(51, -8, 0);
-        this.Start();
+        Start();
     }
 
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ElectricBallController : MonoBehaviour {
 	private GameObject player;
 	private GameObject startPosition;
-	private float speed = 8f;
+	private float speed = 25f;
 	private bool isForward = true;
 
 	void Awake() {
