@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //using UnityEditor;
 
-public class Monster_behaviour : MonoBehaviour
+public class StoneMonster : MonoBehaviour
 {
 
     private Vector3 moveDirection;
@@ -117,6 +117,12 @@ public class Monster_behaviour : MonoBehaviour
         //DestroyObject(gameObject);
 
         StopAllCoroutines();
+    }
+
+    public void Reset()
+    {
+        transform.position = new Vector3(51, -8, 0);
+        this.Start();
     }
 
 }

@@ -1,14 +1,14 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour {
 	private float _gravity = 1.0f;
-	private float maxTpAmmo;
+	private int maxTpAmmo;
 	private Animator anim;
 	private bool isForward = true;
 	private bool isBackward = false;
+    private int deaths = 0;
 
 	private bool teleportRunning = false;
 
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
 	[Header("Portée du teleport")]
 	public float teleportRange = 1f;
 
-	public float tpAmmo = 2f;
+	public int tpAmmo = 2;
 
 	[Header("Le prefab de l'attaque")]
 	public Transform electricFireBall;
@@ -136,9 +136,19 @@ public class Player : MonoBehaviour {
 		Transform projectile = Instantiate (electricFireBall);
 	}
 
-	public void Fall() {
-		transform.position = Vector3.zero;
-		this.tpAmmo = maxTpAmmo;
+	public void Kill() {
+        tpAmmo = maxTpAmmo;
+        deaths++;
+    }
+
+    public int Deaths()
+    {
+        return deaths;
+    }
+
+    public int TeleportAmmo()
+    {
+        return tpAmmo;
     }
 
 	public bool GetIsForward() {

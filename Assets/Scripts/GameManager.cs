@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-    private int level = 3;                                  //Current level number, expressed in game as "Day 1".
+    private int level = 3;                                 //Current level number, expressed in game as "Day 1".
+	private GameOverUI gameOverUI;
 
 	public Vector3 spawnLocation;							// Spawn location for player
 
@@ -26,24 +27,20 @@ public class GameManager : MonoBehaviour {
         
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
+
+        gameOverUI = FindObjectOfType(typeof(GameOverUI)) as GameOverUI;
     }
 
     //Initializes the game for each level.
-    public void RespawnPlayer()
+    public void GameOver()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-		player.transform.position = spawnLocation;
-        player.GetComponent<Player>().tpAmmo = 10f;
+        gameOverUI.FadeInOut();
 
-        GameObject stoneMonster = GameObject.FindGameObjectWithTag("Monster");
-        stoneMonster.transform.position = new Vector3(51, -8, 0);
-        stoneMonster.GetComponent<Monster_behaviour>().Start();
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player.transform.position = spawnLocation;
+		player.Kill();
 
-    }
-    
-    //Update is called every frame.
-    void Update()
-    {
-
+        StoneMonster stoneMonster = GameObject.FindGameObjectWithTag("Monster").GetComponent<StoneMonster>();
+        stoneMonster.Reset();
     }
 }
