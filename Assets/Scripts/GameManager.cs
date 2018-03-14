@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
     private int level = 3;                                  //Current level number, expressed in game as "Day 1".
 
+	public Vector3 spawnLocation;							// Spawn location for player
+
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -30,8 +32,8 @@ public class GameManager : MonoBehaviour {
     public void RespawnPlayer()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = Vector3.zero;
-        player.GetComponent<Player>().tpAmmo = 2f;
+		player.transform.position = spawnLocation;
+        player.GetComponent<Player>().tpAmmo = 10f;
 
         GameObject stoneMonster = GameObject.FindGameObjectWithTag("Monster");
         stoneMonster.transform.position = new Vector3(51, -8, 0);

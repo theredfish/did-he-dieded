@@ -550,8 +550,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011845235402}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.65, y: -0.32, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4000013402725622}
   - {fileID: 4000014095708822}
@@ -713,9 +713,8 @@ MonoBehaviour:
   moveSpeed: 12
   teleportRange: 5
   tpAmmo: Infinity
-  roseFireBall: {fileID: 4240302625424766, guid: ced33d1158ef10744bf6e8f312b9b230,
-    type: 2}
-  hasGravity: 0
+  electricFireBall: {fileID: 0}
+  hasGravity: 1
   tpStartParticles: {fileID: 1000012906409722, guid: 8887970892f60ae469bbd550b0a91a04,
     type: 2}
   tpEndParticles: {fileID: 1000012906409722, guid: 8887970892f60ae469bbd550b0a91a04,
@@ -789,10 +788,10 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 8
-  m_Radius: 2
+  m_Height: 1.37
+  m_Radius: 0.38
   m_SlopeLimit: 45
   m_StepOffset: 0
   m_SkinWidth: 0.002
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 4, z: 0}
+  m_Center: {x: 0, y: 0.65, z: 0}
