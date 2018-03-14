@@ -1,11 +1,9 @@
-﻿using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour {
 
-    private bool isPaused = false; // Permet de savoir si le jeu est en pause
+    private bool isPaused = false; // let us to know if the game is paused
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +12,7 @@ public class MenuPause : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Submit"))
         {
             isPaused = !isPaused;
         }
@@ -40,7 +37,8 @@ public class MenuPause : MonoBehaviour {
             }
             if (GUI.Button(new Rect(Screen.width / 2 + 40, Screen.height / 2 + 40, 100, 40), "Menu principal"))
             {
-                Application.LoadLevel("WelcomeScreen");
+                SceneManager.LoadScene("WelcomeScreen", LoadSceneMode.Additive);
+                
             }
             if (GUI.Button(new Rect(Screen.width / 2 + 40, Screen.height / 2 + 100, 100, 40), "Fuire"))
             {

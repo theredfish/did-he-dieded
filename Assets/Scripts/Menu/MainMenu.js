@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 function Start_Game () {
-	Application.LoadLevel("TutorialMap");
+	Application.LoadLevel("TutorialMapv2");
 	//SceneManager.LoadScene("MonsterPatrol");
 }
 
