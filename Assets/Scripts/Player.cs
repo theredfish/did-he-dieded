@@ -3,7 +3,8 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour {
-	private float _gravity = 1.0f;
+    private CharacterController controller;
+    private float _gravity = 1.0f;
 	private int maxTpAmmo;
 	private Animator anim;
 	private bool isForward = true;
@@ -13,8 +14,10 @@ public class Player : MonoBehaviour {
     private float attackTimer = 0.8f;
     private bool attacking = false;
 	private bool teleportRunning = false;
+    private Vector3 movement = Vector3.zero;
+    private AudioSource audio;
 
-	[Header("La puissance du saut")]
+    [Header("La puissance du saut")]
 	public float jumpForce = 5f;
 
 	[Header("Vitesse de déplacement horizontal")]
@@ -23,15 +26,12 @@ public class Player : MonoBehaviour {
 	[Header("Portée du teleport")]
 	public float teleportRange = 1f;
 
-	public int tpAmmo = 2;
+	public int tpAmmo = 10;
 
 	[Header("Le prefab de l'attaque")]
 	public Transform electricFireBall;
 
-	private CharacterController controller;
-
 	public bool hasGravity = true;
-
 
 	[Header("Le prefab de l'effet de tp - start")]
 	public GameObject tpStartParticles;
@@ -39,14 +39,19 @@ public class Player : MonoBehaviour {
 
 	[Header("Le prefab de l'effet de tp - end")]
 	public GameObject tpEndParticles;
-	// The current movement vector
-	private Vector3 movement = Vector3.zero;
 
-	// Use this for initialization
-	void Start () {
+    [Header("Death audio clip")]
+    public AudioClip deathAudioClip;
+
+    [Header("Teleport audio clip")]
+    public AudioClip teleportAudioClip;
+
+    // Use this for initialization
+    void Start () {
 		this.controller = GetComponent<CharacterController> ();
 		this.maxTpAmmo = this.tpAmmo;
 		this.anim = GetComponent<Animator>();
+        this.audio = GetComponent<AudioSource>();
 	}
 
 	void Update () {
@@ -120,7 +125,9 @@ public class Player : MonoBehaviour {
 
 	void Teleport() {
 		if (!teleportRunning) {
-			StartCoroutine ("TeleportCoroutine");
+            audio.clip = teleportAudioClip;
+            audio.Play();
+            StartCoroutine ("TeleportCoroutine");
 		}
 	}
 
@@ -153,6 +160,8 @@ public class Player : MonoBehaviour {
     }
 
 	public void Kill() {
+        audio.clip = deathAudioClip;
+        audio.Play();
         tpAmmo = maxTpAmmo;
         deaths++;
     }
