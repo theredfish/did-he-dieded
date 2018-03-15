@@ -63,6 +63,16 @@ public class Player : MonoBehaviour {
 			this.Teleport ();
 		}
 
+        // Disable collider during teleport
+        if (teleportRunning)
+        {
+            controller.detectCollisions = false;
+        }
+        else
+        {
+            controller.detectCollisions = true;
+        }
+
 		// We check any new attack
 		if (Input.GetButtonDown("Fire2") && !attacking) {
             attacking = true;
