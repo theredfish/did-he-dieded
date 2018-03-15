@@ -6,7 +6,6 @@ using UnityEngine;
 public class DeathCollider : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
-        Debug.LogError(other);
 		if (other.CompareTag ("Player")) {
             if (!(this.CompareTag("Monster") && this.GetComponent<StoneMonster>().isDead))
             {
