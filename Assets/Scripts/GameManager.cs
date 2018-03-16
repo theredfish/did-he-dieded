@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour {
     private bool gameIsPaused = false;
     private StoppableGameobject[] stoppableGameobjects;
 
-	public TrapsTrigger traps;
-
     //private EventSystem eventSystem;
 
     void Awake()
@@ -91,8 +89,6 @@ public class GameManager : MonoBehaviour {
         player.Kill();
         player.transform.position = playerSpawn;
 		player.alive = true;
-
-		traps.PikesIn ();
 
         stoneMonster.Reset();
         stoneMonster.transform.position = stoneMonsterSpawn;
