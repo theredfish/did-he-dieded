@@ -389,6 +389,11 @@ Prefab:
       propertyPath: teleportAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5a18b5323ab6da64c86b330f8019177f, type: 3}
+    - target: {fileID: 114985235266678020, guid: 5cd874a387e9ca947b9ef64529c8c7af,
+        type: 2}
+      propertyPath: tpAmmo
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cd874a387e9ca947b9ef64529c8c7af, type: 2}
   m_IsPrefabParent: 0
@@ -3115,7 +3120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cd6bdc3e7d9d64b915e330190a230e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  continueBtn: {fileID: 0}
 --- !u!1001 &1365659027
 Prefab:
   m_ObjectHideFlags: 0
