@@ -9,7 +9,7 @@ public class SpikeMonster : MonoBehaviour
     public LayerMask aggroLayerMask;
     public float speed = 6.0F;
     public GameObject deathParticles;
-    public float aggroDistance = 15;
+    public float aggroDistance = 20;
 
     private Vector3 moveDirection;
     private Vector3 endDirection;
@@ -51,7 +51,7 @@ public class SpikeMonster : MonoBehaviour
         {
             StopAllCoroutines();
             Instantiate(deathParticles, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+			gameObject.SetActive (false);
         }
     }
 

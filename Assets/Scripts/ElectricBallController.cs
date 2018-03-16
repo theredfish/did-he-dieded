@@ -17,6 +17,7 @@ public class ElectricBallController : MonoBehaviour {
 	void Start () {
 		transform.position = this.startPosition.transform.position;
 		isForward = player.gameObject.GetComponent<Player> ().GetIsForward ();
+		Invoke ("Kill", 2);
 	}
 
 	void Update() {
@@ -31,5 +32,9 @@ public class ElectricBallController : MonoBehaviour {
 		if (other.tag != "Player") {
 			Destroy (gameObject);
 		}
+	}
+
+	void Kill(){
+		Destroy (gameObject);
 	}
 }	

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private CharacterController controller;
-    private float _gravity = 1.0f;
+    private float _gravity = 1.5f;
 	private int maxTpAmmo;
 	private Animator anim;
 	private bool isForward = true;

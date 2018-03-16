@@ -128,7 +128,8 @@ GameObject:
   - component: {fileID: 95000011356187476}
   - component: {fileID: 143109121315181164}
   - component: {fileID: 114985235266678020}
-  m_Layer: 0
+  - component: {fileID: 82288565373219048}
+  m_Layer: 8
   m_Name: FreeVoxelGirlRedhairPrefab
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -710,6 +711,86 @@ Transform:
   m_Father: {fileID: 4000012858991242}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &82288565373219048
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011845235402}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95000011356187476
 Animator:
   serializedVersion: 3
@@ -738,10 +819,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88444d5a84bce2a43b5ca04e9becce72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 20
+  alive: 1
+  jumpForce: 18
   moveSpeed: 20
   teleportRange: 5
-  tpAmmo: 2
+  tpAmmo: 10
   electricFireBall: {fileID: 4147101347385056, guid: 8574146800e80944080602a2128e5e02,
     type: 2}
   hasGravity: 1
@@ -749,6 +831,8 @@ MonoBehaviour:
     type: 2}
   tpEndParticles: {fileID: 1000012906409722, guid: 8887970892f60ae469bbd550b0a91a04,
     type: 2}
+  deathAudioClip: {fileID: 8300000, guid: e70d556622b73714dbf03ce30e8cfe43, type: 3}
+  teleportAudioClip: {fileID: 8300000, guid: 5a18b5323ab6da64c86b330f8019177f, type: 3}
 --- !u!137 &137000010793667796
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

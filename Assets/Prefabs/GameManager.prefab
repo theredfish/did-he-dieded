@@ -11,6 +11,36 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1662718382622896}
   m_IsPrefabParent: 1
+--- !u!1 &1179801775989204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4349947664586720}
+  m_Layer: 0
+  m_Name: StoneMonsterSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1187508642403130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4484856544996130}
+  m_Layer: 0
+  m_Name: SpikeMonsterSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1473329967515464
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,6 +49,21 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4437999579911022}
+  m_Layer: 0
+  m_Name: PlayerSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1646426756255822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4514414650538920}
   m_Layer: 0
   m_Name: PlayerSpawn
   m_TagString: Untagged
@@ -51,18 +96,72 @@ GameObject:
   m_Component:
   - component: {fileID: 4733763126944186}
   m_Layer: 0
+  m_Name: SpikeMonsterSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1907664238137220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4757808224643936}
+  m_Layer: 0
   m_Name: StoneMonsterSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4349947664586720
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1179801775989204}
+  m_LocalRotation: {x: -0, y: 0.5263935, z: 0, w: 0.85024107}
+  m_LocalPosition: {x: 20.19, y: 55, z: 7.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4632071620916542}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4437999579911022
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1473329967515464}
+  m_LocalRotation: {x: -0, y: 0.5263935, z: 0, w: 0.85024107}
+  m_LocalPosition: {x: -1.94, y: 55, z: -3.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4632071620916542}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!4 &4484856544996130
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187508642403130}
+  m_LocalRotation: {x: -0, y: 0.52639353, z: -0, w: 0.85024107}
+  m_LocalPosition: {x: 148.7, y: 57.8, z: 68.6}
+  m_LocalScale: {x: 0.9999998, y: 1, z: 0.9999998}
+  m_Children: []
+  m_Father: {fileID: 4632071620916542}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!4 &4514414650538920
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1646426756255822}
   m_LocalRotation: {x: -0, y: 0.5263935, z: 0, w: 0.85024107}
   m_LocalPosition: {x: -1.94, y: 55, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -80,8 +179,12 @@ Transform:
   m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4733763126944186}
+  - {fileID: 4349947664586720}
+  - {fileID: 4514414650538920}
+  - {fileID: 4757808224643936}
   - {fileID: 4437999579911022}
+  - {fileID: 4484856544996130}
+  - {fileID: 4733763126944186}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 26.476002, z: 0}
@@ -91,12 +194,25 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821475763514784}
+  m_LocalRotation: {x: -0, y: 0.52639353, z: -0, w: 0.85024107}
+  m_LocalPosition: {x: 263.19998, y: 60.98, z: 125.7}
+  m_LocalScale: {x: 0.9999998, y: 1, z: 0.9999998}
+  m_Children: []
+  m_Father: {fileID: 4632071620916542}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!4 &4757808224643936
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907664238137220}
   m_LocalRotation: {x: -0, y: 0.5263935, z: 0, w: 0.85024107}
   m_LocalPosition: {x: 20.19, y: 55, z: 7.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4632071620916542}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &114585232253896454
 MonoBehaviour:
@@ -109,3 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: defb161d980e9e44a81af82fb03e7c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsters:
+  - {fileID: 0}
+  - {fileID: 0}
