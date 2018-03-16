@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
         gameOverUI = FindObjectOfType(typeof(GameOverUI)) as GameOverUI;
     }
 
-    private void Update()
+    void Update()
     {
         if (Input.GetButtonDown("Submit"))
         {
@@ -71,14 +71,19 @@ public class GameManager : MonoBehaviour {
 
         if (gameIsPaused)
         {
-            Time.timeScale = 0f;
+            StopTime();
             SceneManager.LoadScene("PauseMenuScene", LoadSceneMode.Additive);
         }
         else
         {
             SceneManager.UnloadSceneAsync("PauseMenuScene");
-            Time.timeScale = 1.0f;
+            StartTime();
         }
+    }
+
+    public void GameWin()
+    {
+        SceneManager.LoadScene("WinScene");
     }
 
     // Reset game objects
@@ -92,5 +97,15 @@ public class GameManager : MonoBehaviour {
 
         stoneMonster.Reset();
         stoneMonster.transform.position = stoneMonsterSpawn;
+    }
+
+    private void StopTime()
+    {
+        Time.timeScale = 0f;
+    }
+
+    private void StartTime()
+    {
+        Time.timeScale = 1.0f;
     }
 }

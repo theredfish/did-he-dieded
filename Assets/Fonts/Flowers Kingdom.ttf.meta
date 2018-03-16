@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e5931b92a78534e4694dd0a01088af98
+timeCreated: 1521204610
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Flowers Kingdom
+  fontNames:
+  - Flowers Kingdom
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
