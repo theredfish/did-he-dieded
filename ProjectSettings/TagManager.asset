@@ -12,6 +12,9 @@ TagManager:
   - GameManager
   - ElectricBall
   - SpikeMonster
+  - SpikeMonster4
+  - SpikeMonster3
+  - SpikeMonster2
   layers:
   - Default
   - TransparentFX
