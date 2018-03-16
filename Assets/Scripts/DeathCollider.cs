@@ -9,9 +9,15 @@ public class DeathCollider : MonoBehaviour {
 		if (other.CompareTag ("Player")) {
             if (!(this.CompareTag("Monster") && this.GetComponent<StoneMonster>().isDead))
             {
-                GameManager gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-                gameManager.GameOver();
+				other.GetComponent<Animator> ().Play ("Death");
+				other.GetComponent<Player> ().alive = false;
+				Invoke ("Kill", 1);
             }
 		}
+	}
+
+	void Kill(){
+		GameManager gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+		gameManager.GameOver();		
 	}
 }
