@@ -11,6 +11,7 @@ TagManager:
   - StartAttackPosition
   - GameManager
   - ElectricBall
+  - SpikeMonster
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
