@@ -87,10 +87,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4438458191730834}
-  - component: {fileID: 54311129719735142}
   - component: {fileID: 65249581285296894}
   - component: {fileID: 114632306276212952}
   - component: {fileID: 114090749381173088}
+  - component: {fileID: 54679763511526598}
   m_Layer: 0
   m_Name: SpikeMonster
   m_TagString: SpikeMonster
@@ -328,7 +328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420095580986600}
   m_LocalRotation: {x: 0.034606438, y: 0.03387294, z: -0.03028558, w: 0.9983676}
-  m_LocalPosition: {x: 9.89, y: 55, z: -3}
+  m_LocalPosition: {x: 10.68, y: 62.13, z: -4.44}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_Children:
   - {fileID: 4155412700259544}
@@ -842,7 +842,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1954658871790526}
   m_Mesh: {fileID: 4300008, guid: f4e78bdd2be2f27448c21e143b5a7ea1, type: 3}
---- !u!54 &54311129719735142
+--- !u!54 &54679763511526598
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -853,9 +853,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 12
   m_CollisionDetection: 0
 --- !u!65 &65249581285296894
 BoxCollider:
@@ -867,8 +867,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0041736984, y: 0.004629328, z: 0.00450309}
-  m_Center: {x: -0.00007937668, y: 0.00014288466, z: 0.0027485015}
+  m_Size: {x: 0.0036376826, y: 0.004131326, z: 0.004503089}
+  m_Center: {x: 0.000034441775, y: 0.00019890256, z: 0.0027485013}
 --- !u!114 &114090749381173088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -884,6 +884,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   speed: 6
+  deathParticles: {fileID: 147254, guid: bb1c70a7b69cb4e408e31bde844ac837, type: 2}
 --- !u!114 &114632306276212952
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class StoneMonster : MonoBehaviour
 {
+    public float speed = 6.0F;
+    public bool isDead = false;
+    public int nbAnimDeath = 0;
+
     private Vector3 moveDirection;
     private Vector3 endDirection;
-    public float speed = 6.0F;
     private bool goRight = true;
     private bool doPatrolCoroutine = true;
-    public bool isDead = false;
-
-    public int nbAnimDeath = 0;
 
     Animation anim;
     public const string IDLE = "Anim_Idle";
@@ -25,6 +25,7 @@ public class StoneMonster : MonoBehaviour
         moveDirection = transform.position;
         endDirection = new Vector3(moveDirection.x + 10, moveDirection.y, moveDirection.z);
         anim = GetComponent<Animation>();
+        goRight = true;
         isDead = false;
         nbAnimDeath = 0;
     }

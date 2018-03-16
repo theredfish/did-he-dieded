@@ -8,7 +8,9 @@ public class SpikeMonster : MonoBehaviour
 {
     public LayerMask aggroLayerMask;
     public float speed = 6.0F;
-    
+    public GameObject deathParticles;
+    public float aggroDistance = 15;
+
     private Vector3 moveDirection;
     private Vector3 endDirection;
     private bool goUp = true;
@@ -19,15 +21,14 @@ public class SpikeMonster : MonoBehaviour
     void Start()
     {
         moveDirection = transform.position;
-        endDirection = new Vector3(moveDirection.x, moveDirection.y + 1, moveDirection.z);
-        StartCoroutine("SpikeIDLE");
+        endDirection = new Vector3(moveDirection.x, moveDirection.y + 0.5f, moveDirection.z);
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        withinAggroColliders = Physics.OverlapSphere(transform.position, 10, aggroLayerMask);
+        withinAggroColliders = Physics.OverlapSphere(transform.position, aggroDistance, aggroLayerMask);
 
         if (withinAggroColliders.Length > 0)
         {
@@ -49,6 +50,7 @@ public class SpikeMonster : MonoBehaviour
         if (collider.gameObject.tag == "ElectricBall")
         {
             StopAllCoroutines();
+            Instantiate(deathParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
