@@ -7,9 +7,9 @@ public class CameraManager : MonoBehaviour {
 	private Vector3 Offset = new Vector3(10f, 10f, -15.23f);
 
 	// Update is called once per frame
-	void LateUpdate () {/*
+	void LateUpdate () {
 		if (Player != null) {
 			transform.position = Player.position + Offset;
 		}
-	*/}
+	}
 }
