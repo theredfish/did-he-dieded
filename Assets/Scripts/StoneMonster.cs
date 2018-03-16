@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class StoneMonster : MonoBehaviour
 {
-
     private Vector3 moveDirection;
     private Vector3 endDirection;
     public float speed = 6.0F;

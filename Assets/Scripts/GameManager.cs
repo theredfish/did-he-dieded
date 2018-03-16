@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
-    private int level = 1;
 	private GameOverUI gameOverUI;
 
     private Player player;
@@ -14,6 +15,10 @@ public class GameManager : MonoBehaviour {
     private Vector3 playerSpawn;
     private Vector3 stoneMonsterSpawn;
 
+    private bool gameIsPaused = false;
+    private StoppableGameobject[] stoppableGameobjects;
+
+    //private EventSystem eventSystem;
 
     void Awake()
     {
@@ -40,7 +45,33 @@ public class GameManager : MonoBehaviour {
         stoneMonster = GameObject.FindGameObjectWithTag("Monster").GetComponent<StoneMonster>();
         stoneMonster.transform.position = stoneMonsterSpawn;
 
+        //eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+
         gameOverUI = FindObjectOfType(typeof(GameOverUI)) as GameOverUI;
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Submit"))
+        {
+            TogglePause();
+        }
+    }
+
+    public void TogglePause()
+    {
+        gameIsPaused = !gameIsPaused;
+
+        if (gameIsPaused)
+        {
+            Time.timeScale = 0f;
+            SceneManager.LoadScene("PauseMenuScene", LoadSceneMode.Additive);
+        }
+        else
+        {
+            SceneManager.UnloadSceneAsync("PauseMenuScene");
+            Time.timeScale = 1.0f;
+        }
     }
 
     // Reset game objects

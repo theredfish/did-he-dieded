@@ -2,7 +2,8 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
     private CharacterController controller;
     private float _gravity = 1.0f;
 	private int maxTpAmmo;
@@ -103,7 +104,7 @@ public class Player : MonoBehaviour {
 			movement.y -= _gravity;
 		}
 
-		WalkOrIdle (movement);
+        WalkOrIdle(movement);
 	}
 
 	void WalkOrIdle(Vector3 movement) {
@@ -165,7 +166,6 @@ public class Player : MonoBehaviour {
 
 
     public void Shoot() {
-        anim.SetTrigger("isAttacking");
         Transform projectile = Instantiate(electricFireBall);
     }
 
