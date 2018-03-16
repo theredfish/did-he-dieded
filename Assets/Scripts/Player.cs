@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     private Vector3 movement = Vector3.zero;
     private AudioSource audio;
 
+	public bool alive = true;
+
     [Header("La puissance du saut")]
 	public float jumpForce = 5f;
 
@@ -56,6 +58,9 @@ public class Player : MonoBehaviour
 	}
 
 	void Update () {
+		if (!alive) {
+			return;
+		}
 		// First of all, we get the base movement
 		movement.x = Input.GetAxis("Horizontal") * this.moveSpeed;
 
