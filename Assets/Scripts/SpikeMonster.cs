@@ -9,7 +9,6 @@ public class SpikeMonster : MonoBehaviour
     public LayerMask aggroLayerMask;
     public float speed = 6.0F;
     
-    private NavMeshAgent navAgent;
     private Vector3 moveDirection;
     private Vector3 endDirection;
     private bool goUp = true;
@@ -19,29 +18,39 @@ public class SpikeMonster : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        navAgent = GetComponent<NavMeshAgent>();
-        
         moveDirection = transform.position;
         endDirection = new Vector3(moveDirection.x, moveDirection.y + 1, moveDirection.z);
+        StartCoroutine("SpikeIDLE");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //StartCoroutine("SpikeIDLE");
+        
         withinAggroColliders = Physics.OverlapSphere(transform.position, 10, aggroLayerMask);
 
         if (withinAggroColliders.Length > 0)
         {
+            StopCoroutine("SpikeIDLE");
             ChasePlayer(withinAggroColliders[0].GetComponent<Player>());
+        } else
+        {
+            StartCoroutine("SpikeIDLE");
         }
     }
 
     void ChasePlayer(Player player)
     {
-        //navAgent.Warp(transform.position);
-        //navAgent.SetDestination(player.transform.position);
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "ElectricBall")
+        {
+            StopAllCoroutines();
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator SpikeIDLE()

@@ -11,9 +11,11 @@ public class GameManager : MonoBehaviour {
 
     private Player player;
     private StoneMonster stoneMonster;
-    
+    private SpikeMonster spikeMonster;
+
     private Vector3 playerSpawn;
     private Vector3 stoneMonsterSpawn;
+    private Vector3 spikeMonsterSpawn;
 
     private bool gameIsPaused = false;
     private StoppableGameobject[] stoppableGameobjects;
@@ -44,6 +46,11 @@ public class GameManager : MonoBehaviour {
         stoneMonsterSpawn = transform.Find("StoneMonsterSpawn").position;
         stoneMonster = GameObject.FindGameObjectWithTag("Monster").GetComponent<StoneMonster>();
         stoneMonster.transform.position = stoneMonsterSpawn;
+        /*
+        spikeMonsterSpawn = transform.Find("StoneMonsterSpawn").position;
+        spikeMonster = GameObject.FindGameObjectWithTag("SpikeMonster").GetComponent<SpikeMonster>();
+        spikeMonster.transform.position = spikeMonsterSpawn;
+        */
 
         //eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
 
